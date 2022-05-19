@@ -28,11 +28,10 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/assets",
-              "src/_redirects",
               {
-                  "glob": "_redirects",
-                  "input": "src",
-                   "output": "/"
+                "glob": "**/*",
+                "input": "node_modules/@taiga-ui/icons/src",
+                "output": "assets/taiga-ui/icons"
               }
             ],
             "styles": [
