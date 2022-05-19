@@ -28,6 +28,7 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/assets",
+              "src/_redirects",
               {
                   "glob": "_redirects",
                   "input": "src",
