@@ -1,0 +1,40 @@
+<tui-root>
+  <div class="header">
+    <div class="text-header">
+      <h1 class="text">{{ 'COVER.HEADER' | translate }}</h1>
+    </div>
+
+    <ng-container *ngIf="authService.currentUser$ | async as user; else loginButton">
+      <div class="login">
+        <button mat-button class="login_text" [matMenuTriggerFor]="userMenu">
+          <mat-icon>account_circle</mat-icon>
+          {{user.displayName}}
+          <mat-icon>expand_more</mat-icon>
+        </button>
+      </div>
+    </ng-container>
+    
+    <ng-template #loginButton>
+      <div class="login">
+        <button mat-button class="login_text" routerLink="login">
+          <mat-icon>login</mat-icon>
+          {{ 'COVER.LOGIN' | translate }}
+        </button>
+      </div>
+    </ng-template>
+    
+    <div class="select-language">
+      <app-select-language></app-select-language>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">{{ 'COVER.LOGOUT' | translate }}</button>
+  </mat-menu>
+</tui-root>
+
+
+
+

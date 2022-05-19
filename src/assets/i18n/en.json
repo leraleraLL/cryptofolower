@@ -1,0 +1,51 @@
+{
+    "COVER": {
+        "HEADER": "Hey! What's the rate of cryptocurrency?",
+        "LOGIN": "Login",
+        "LOGOUT": "Logout",
+        "TEXT1": "If you want to be",
+        "TEXT1SPAN":" cool ",
+        "TEXT2": "and follow bitcoins like everyone else, then",
+        "TEXT2SPAN": "log in soon",
+        "TEXT3": "And follow the most popular cryptocurrency in ",
+        "TEXT3SPAN": "real time"
+    },
+    "TABLE": {
+        "NAME": "Name",
+        "SYMBOL": "Symbol",
+        "PRICE": "Price",
+        "MARKET_CAP": "Market cap",
+        "CHG": "Chg"
+    },
+    "DATA_SHOW": {
+        "HEADER": "All cruptocurrencies",
+        "NUM_CRYPTO": "Number of cruptocurrencies:",
+        "TIME": "Time: "
+    },
+    "LOGIN": {
+        "NAME": "Login",
+        "EMAIL_LABEL": "Wtite email",
+        "EMAIL_ERROR1": "Email is requared",
+        "EMAIL_ERROR2": "Please enter a correct email format",
+        "PASSWORD_LABEL": "Write password",
+        "PASSWORD_ERROR": "Password is requared",
+        "TEXT_NEW_USER": "New user ?",
+        "TEXT_LINK": " Sign up! "
+    },
+    "SIGN-UP": {
+        "NAME": "Sign up a new user!",
+        "NAME_LABEL": "Wtite name",
+        "NAME_ERROR": "Name is requared",
+        "EMAIL_LABEL": "Wtite email",
+        "EMAIL_ERROR1": "Email is requared",
+        "EMAIL_ERROR2": "Please enter a correct email format",
+        "PASSWORD_LABEL": "Write password",
+        "PASSWORD_ERROR1": "Password is requared",
+        "PASSWORD_ERROR2": "Name must be at least 6 characters long",
+        "CONFIRM_PASSWORD_LABEL": "Write confirm password",
+        "CONFIRM_PASSWORD_ERROR": "Password is requared",
+        "ERRORS_PASSWORDS": "Passwords should match",
+        "TEXT_LINK": " Sign up! "
+    }
+
+}

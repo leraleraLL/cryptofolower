@@ -1,0 +1,53 @@
+<div class="form">
+    <h1>{{ 'SIGN-UP.NAME' | translate }}</h1>
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+
+        <mat-form-field appearance="fill" >
+            <mat-label>{{ 'SIGN-UP.NAME_LABEL' | translate }}</mat-label>
+            <input matInput placeholder="{{ 'SIGN-UP.NAME_LABEL' | translate }}" formControlName='name'>
+            <mat-error *ngIf="name?.errors?.['required']">
+                {{ 'SIGN-UP.NAME_ERROR' | translate }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+            <mat-label>{{ 'SIGN-UP.EMAIL_LABEL' | translate }}</mat-label>
+            <input matInput placeholder="{{ 'SIGN-UP.EMAIL_LABEL' | translate }}" formControlName='email'>
+            <mat-error *ngIf="email?.errors?.['required']">
+                {{ 'SIGN-UP.EMAIL_ERROR1' | translate }}
+            </mat-error>
+            <mat-error *ngIf="email?.errors?.['email']">
+                {{ 'SIGN-UP.EMAIL_ERROR2' | translate }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+            <mat-label>{{ 'SIGN-UP.PASSWORD_LABEL' | translate }}</mat-label>
+            <input matInput placeholder="{{ 'SIGN-UP.PASSWORD_LABEL' | translate }}" formControlName='password' type="password" >
+            <mat-error *ngIf="password?.errors?.['required']">
+                {{ 'SIGN-UP.PASSWORD_ERROR1' | translate }}
+            </mat-error>
+            <mat-error *ngIf="password?.errors?.['minlength']">
+                {{ 'SIGN-UP.PASSWORD_ERROR2' | translate }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" >
+            <mat-label>{{ 'SIGN-UP.CONFIRM_PASSWORD_LABEL' | translate }}</mat-label>
+            <input matInput placeholder="{{ 'SIGN-UP.CONFIRM_PASSWORD_LABEL' | translate }}" formControlName='confirmPassword' type="password">
+            <mat-error *ngIf="confirmPassword?.errors?.['required']">
+                {{ 'SIGN-UP.CONFIRM_PASSWORD_ERROR' | translate }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+            {{ 'SIGN-UP.ERRORS_PASSWORDS' | translate }}
+        </mat-error>
+
+        <div class="form_button">
+            <button class="button_logout" mat-raised-button [disabled]="signUpForm.invalid" type="submit">
+                {{ 'SIGN-UP.TEXT_LINK' | translate }}
+            </button>
+        </div>
+    </form>
+</div>
